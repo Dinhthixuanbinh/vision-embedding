@@ -1,0 +1,61 @@
+
+# Data configuration
+data:
+  data_dir: "data"
+  checkpoint_dir: "checkpoints"
+  sequence_length: 10
+  batch_size: 32
+  num_workers: 4
+
+# Model configuration  
+model:
+  hidden_size: 32
+  lstm_hidden: 64
+  lstm_layers: 2
+
+# Training configuration
+training:
+  learning_rate: 0.001
+  weight_decay: 1e-4
+  max_grad_norm: 1.0
+  num_epochs: 100
+  early_stopping_patience: 10
+
+# Object detection configuration
+detection:
+  confidence_threshold: 0.5
+  max_objects:
+    car: 20
+    pedestrian: 10  
+    traffic: 10
+
+# Graph configuration
+graph:
+  gcn_layers: 2
+  neighborhood_size: 1 # K-hop size
+  pooling: "max"
+
+# Spatial-temporal configuration  
+temporal:
+  sequence_length: 10
+  lstm_hidden_size: 64
+  lstm_layers: 2
+  dropout: 0.5
+
+# Inference configuration
+inference:
+  batch_size: 1
+  visualize: true
+  save_predictions: true
+  output_fps: 30
+
+# Augmentation configuration
+augmentation:
+  resize_size: [224, 224]
+  random_flip: true
+  random_rotation: 15
+  color_jitter:
+    brightness: 0.4
+    contrast: 0.4
+    saturation: 0.4
+    hue: 0.1

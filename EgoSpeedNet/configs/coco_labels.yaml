@@ -1,0 +1,14 @@
+```yaml
+# Updated COCO label map for EgoSpeed-Net based on paper
+# Vehicle-category (including cars, buses and trucks)
+1: car
+2: bus 
+3: truck
+
+# Pedestrian-category
+4: person
+
+# Traffic-category (including traffic lights and stop signs)
+5: traffic light
+6: stop sign
+```
